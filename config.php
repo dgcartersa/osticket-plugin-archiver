@@ -16,7 +16,7 @@ class ArchiverPluginConfig extends PluginConfig {
 		}
 		return Plugin::translate ( 'archiver' );
 	}
-	function pre_save($config, &$errors) {
+	function pre_save(&$config, &$errors) {
 		
 		// Delete mode doesn't actually need any of this:
 		if($config['mode'] == 'delete')
