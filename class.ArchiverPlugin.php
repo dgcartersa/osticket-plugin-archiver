@@ -14,7 +14,7 @@ class ArchiverPlugin extends Plugin {
 	const DEBUG = FALSE;
 	/**
 	 * I believe this is part of the Plugin spec, which config to use
-	 *
+	 *function uninstall(&$errors) {
 	 * @var string
 	 */
 	var $config_class = 'ArchiverPluginConfig';
@@ -280,8 +280,8 @@ class ArchiverPlugin extends Plugin {
 	 *
 	 * @see Plugin::uninstall()
 	 */
-	function uninstall() {
-		$errors = array ();
+	function uninstall(&$errors) {
+		//$errors = array ();
 		
 		// Do we send an email to the admin telling him about the space used by the archive?
 		global $ost;
